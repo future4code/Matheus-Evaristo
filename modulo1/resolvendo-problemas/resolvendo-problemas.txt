@@ -1,0 +1,30 @@
+7 Passos para resolver problemas na programação
+
+Ter atenção no enunciado
+
+Leia o enunciado com atenção, pense sobre o que o código deve ser capaz de fazer. Identifique informações essenciais que farão a diferença. É preciso interpretar e entender o problema para pensar na melhor abordagem possível.
+
+Retirar Informações Relevantes
+
+Separar palavras chaves, traduzir verbos como funções e analisar a condição para a existência do código. Isolando essas partes você melhora as chances de usar as ferramentas certas para a elaboração do código. 
+
+Pensar Entradas e Saídas
+
+Identificar como e quais dados serão recebidos, quais as possíveis abordagens de código para respostas. Depois dessa análise podemos criar uma função com as entradas e saídas pensadas. 
+
+Fazer um Esquema Visual
+
+Criar exemplos da situação, montando diagramas com a lógica do código. Pensar nos cenários possíveis e colocar os inputs e outputs. Os diagramas ajudam a visualizar e entender o caminho que o código deve fazer.
+
+Criar Código Feio
+
+Não tenha medo de experimentar diferentes soluções, assim podemos escolher as melhores para trabalhar no código. Dentre as escolhidas podemos testar os resultados e decidir qual delas corresponde ao que foi solicitado no enunciado.
+
+
+Testar Força-Bruta
+
+Soluções óbvias não costumam dar bons resultados, podemos escrever no nosso idioma um esboço do programa para depois transcrever para a linguagem de programação desejada.
+
+Refatorar
+
+Dê bons nomes para as variáveis e funções, elas precisam transmitir com clareza seu papel no código e evitar confusões. Separe as funções de cada elemento para analisar se de fato a melhor abordagem foi usada. É sempre importante começar a refinar o código pelas etapas mais importantes.
