@@ -1,0 +1,67 @@
+#div-index {
+  padding: 60px;
+  text-align: center;
+  
+  font-size: 30px;
+  font-family: arial;
+  color: purple
+
+}
+
+.corpo {
+  background-color: rgb(143, 211, 228)
+}
+
+.links {
+  overflow: hidden;
+  background: #1abc9c;
+  padding: 20px 10px;
+}
+
+/* .links :hover {
+  background-color: orange
+} */
+
+.links a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  
+}
+
+.links a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  background: #f1f1f1;
+}
+
+.links a:hover {
+  background-color:orange;
+  color: black;
+}
+
+
+.links-direita {
+  float: right;
+}
+
+.titulo {
+  font-weight: bold;
+  color: purple;
+  font-size: 20px;
+}
+
+.rodape {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #5d63c2;;
+  color: white;
+  text-align: center;
+}
