@@ -1,0 +1,45 @@
+#menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    float: left;
+    display: inline;
+  }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+ }
+ li a:hover {
+    background-color: white;
+    color:#00cc99;
+  }
+  
+
+ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00cc99;
+}
+
+.home {
+    display: flex;
+    background: url("imagens/fundo.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+}
