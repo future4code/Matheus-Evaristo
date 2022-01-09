@@ -7,24 +7,79 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-   <header>
-    <ul id="menu">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="contact.asp">Contato</a></li>
-      <li><a href="about.asp">Sobre</a></li>
-    </ul>
-   </header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
 
-   <section class="home" id="home">
-    <div class="max-width">
-    <div class="home-content">
-    <div class="text-1">Hello, my name is</div>
-    <div class="text-2">Prakash Shahi</div>
-    <div class="text-3">And I'm a <span class="typing"></span></div>
-    <a href="#">Hire me</a>
-    </div>
-    </div>
-    </section>
+      </ul>
+
+    </nav>
     
+    <section id="home">
+      <div class="main">
+           <h1 class="headings">Matheus Evaristo</h1>
+           <button>
+             Me Contrate
+           </button>
+      </div>
+    </section>
+
+    <section id="about">
+        <h1 class="headings">SOBRE MIM</h1>
+        <div id="pic">
+              <img src="imagens/matheuspf.png" alt="">
+              <div id="intro">
+                  <h2>Matheus Evaristo</h2>
+                  <p>Olá, sou Matheus Evaristo, busco oportunidade de desenvolvimento profissional e coletivo, há cerca de um ano fui estudar por um ano em um intercâmbio em Sydney, Austrália. Passei por diversas experiências, entre elas o primeiro contato com tráfego pago. Atualmente possuo certificado Google Ads de redes de pesquisa e experiência em pesquisa orgânica, desenvolvimento com Wordpress e otimização de landing pages. Tenho capacidade de solucionar dúvidas com pesquisas por conta própria, atenção a detalhes e ótima comunicação verbal e escrita; Embora tenha boa fluência nos conhecimentos apresentados gostaria de me desenvolver junto a uma equipe com desafios diários e reais.
+                  </p> 
+              </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="headings">PORTFÓLIO</h1>
+        <div class="site">
+          <a href="https://fortiumengenharia.com.br/">
+            <img src="imagens/fortium.png" alt="">
+          </a>
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="headings">SERVIÇOS</h1>
+        <div class="row">
+            <div class="box">
+              <img src="imagens/webdev.png" alt="">
+              <h1 class="headings">Design de <br> Websites</h1>
+              <p>Posso criar um website para seu negócio iniciar sua presença online. Tudo feito com Wordpress, Html e Css.</p>
+            </div>
+            <div class="box">
+              <img src="imagens/mrkt.png" alt="">
+              <h1 class="headings">Mídia Paga</h1>
+              <p>Faço campanhas de impulsionamento de publicações dos seus negócios em redes socias (Instagram e Facebook) e também faço geração de leads por meio do Google ads.</p>
+            </div>
+            <div class="box">
+              <img src="imagens/backend.png" alt="">
+              <h1 class="headings">Desenvolvedor <br> Back-End</h1>
+              <p>Criação e manutenção de bancos de dados</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+          <h1 class="headings">CONTATO</h1>
+          <form action="" class="form">
+                <input type="text" name="nome" class="input" placeholder="Insira Seu Nome">
+                <input type="email" name="email" class="input" placeholder="Insira seu E-mail">
+                <textarea name="msg" id="msg" cols="30" rows="10" 
+                placeholder="Escreva Sua Mensagem"></textarea>
+                <input type="submit" value="SEND" id="send">
+          </form>
+    </section> 
+
   </body>
 </html>
