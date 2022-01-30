@@ -1,24 +1,17 @@
 import React from 'react';
 import './App.css';
 import CardGrande from './components/CardGrande/CardGrande';
-import CardPequeno from './components/CardPequeno/CardPequeno';
 import ImagemButton from './components/ImagemButton/ImagemButton';
-import ProfilePic from './img/profilepic.jpg'
-import iconeEmail from './img/emailicon.png'
-import iconeEndereco from './img/adressicon.png'
-
 
 function App() {
-  
-
   return (
     <div className="App">
       <div className="page-section-container">
         <h2>Dados pessoais</h2>
         <CardGrande 
-          imagem={ProfilePic} 
-          nome="Matheus Bezerra Evaristo" 
-          descricao="Oi, Eu sou Matheus. Sou Formado em Tradução - Inglês, possuo experiência com marketing digital na área do tráfego pago e hoje sou um desenvolvedor em desenvolvimento."
+          imagem="https://uploads-ssl.webflow.com/5d640f4558306be99cf47a0e/5dd57846babb597b77c6bb1d_PerfilFuture4_cor.png" 
+          nome="Astrodev" 
+          descricao="Oi, eu sou o Astrodev. Sou o chefe dos alunos da Labenu. Adoro pedir e-mails na sexta-feira e esperar os alunos responderem só para responder com uma bronca e dar mais trabalho para eles."
         />
         
         <ImagemButton 
@@ -31,29 +24,15 @@ function App() {
         <h2>Experiências profissionais</h2>
         <CardGrande 
           imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Tráfego Pago | Google Ads | Facebook Ads | Freelancer |" 
-          descricao="Impulsionamento de publicações, criação de leads, trazer tráfego para websites" 
-        />
-        <CardGrande 
-          imagem="https://s3.amazonaws.com/future4.com.br/static/headf4-c492117ca2373dc85ca81bf715b3dc2a.png" 
-          nome="Livraria Cultura" 
-          descricao="Vendedor" 
+          nome="Labenu" 
+          descricao="Formando desenvolvedores para o mercado de trabalho!" 
         />
         
-  
-      </div>
-
-      <div className="page-section-container">
-          
-          <CardPequeno
-          imagem1={iconeEmail}
-          email="mat.evaristo@gmail.com"
-          imagem2={iconeEndereco}
-          endereco= "SMPW Quadra 1 Conjunto 3 Lote5 Casa C - Brasília - Distrito Federal"
-               
-          />
-
-
+        <CardGrande 
+          imagem="https://imagens.canaltech.com.br/empresas/4418.400.jpg" 
+          nome="NASA" 
+          descricao="Apontando defeitos." 
+        />
       </div>
 
       <div className="page-section-container">
