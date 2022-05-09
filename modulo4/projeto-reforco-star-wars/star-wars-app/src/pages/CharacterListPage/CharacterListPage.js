@@ -26,16 +26,18 @@ const CharacterListPage = () => {
   }
 
 
-  const goToDetailPage = (url) => {
-    navigate('/detalhes-personagem')
+  const goToDetailPage = (i) => {
+    navigate(`/detalhes/${i}`)
     
   }
   
-  const chamaLista = characterList.map((person) => {
+  const chamaLista = characterList.map((person, i) => {
     return (
       
-      <CharCard key={person.url} onClick={goToDetailPage} >
-        {person.name}
+      <CharCard key={i} onClick={() => goToDetailPage(i+1)} >
+          <img src={`https://starwars-visualguide.com/assets/img/characters/${i+1}.jpg`} 
+          width= '200px' height={'200px'} />
+          {person.name}
       </CharCard>
       
     );

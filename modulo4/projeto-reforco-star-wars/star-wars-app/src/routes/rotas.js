@@ -12,7 +12,7 @@ const Rotas = () => {
       <Routes>
         <Route index element={<CharacterListPage />} />
 
-        <Route path="/detalhes-personagem" element={<CharacterDetailPage />} />
+        <Route path='/detalhes/:i' element={<CharacterDetailPage />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
