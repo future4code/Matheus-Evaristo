@@ -2,11 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
-import { CharCard } from "./style";
+import { CharCard, FlexRow } from "./style";
 
 const CharacterListPage = () => {
   const [ characterList, setCharacterList ] = useState([])
-  const [ clickedChar, setClickedChar] = useState('')
+  
 
   const navigate = useNavigate()
 
@@ -33,13 +33,13 @@ const CharacterListPage = () => {
   
   const chamaLista = characterList.map((person, i) => {
     return (
-      
+      <FlexRow>
       <CharCard key={i} onClick={() => goToDetailPage(i+1)} >
           <img src={`https://starwars-visualguide.com/assets/img/characters/${i+1}.jpg`} 
-          width= '200px' height={'200px'} />
+          style ={{padding: 10}} width= '200px' height={'200px'} />
           {person.name}
       </CharCard>
-      
+      </FlexRow>
     );
   });
 

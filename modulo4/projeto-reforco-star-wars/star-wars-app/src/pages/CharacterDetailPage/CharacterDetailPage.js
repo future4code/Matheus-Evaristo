@@ -4,11 +4,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
 import { FlexBox } from "./style";
 
+
 const CharacterDetailPage = () => {
   const [details, setDetails] = useState({})
+  const [planet, setPlanet] = useState({})
+  const [isLoading, setIsLoading] = useState(false)
+
   const navigate = useNavigate()
 
   const params = useParams()
+
+  
 
   const goBack = () => {
     navigate(-1)
@@ -18,13 +24,27 @@ const CharacterDetailPage = () => {
 
   useEffect(() => {
     getDetail()
+    getPlanet()
   }, [])
 
+
   const getDetail = () => {
+    setIsLoading(true)
     axios
       .get(`${BASE_URL}people/${params.i}`)
       .then((res) => {
           setDetails(res.data)
+          setIsLoading(false)
+      })
+      .catch((err) => { console.log(err) })
+      
+  }
+
+  const getPlanet = () => {
+    axios
+      .get(`${BASE_URL}planets/${params.i}`)
+      .then((res) => {
+        setPlanet(res.data)
       })
       .catch((err) => { console.log(err) })
   }
@@ -33,14 +53,17 @@ const CharacterDetailPage = () => {
 
   return (
     <div>
-      <h1>Detalhes do Personagem: {details.name}</h1>
+      <h1>Detalhes do Personagem:</h1>
       <FlexBox>
-      {details.url}
-
+      {isLoading ? 'CARREGANDO...' : <>Nome: {details.name}<br/>
+      <br/>
+                                            
+                                    Planeta de origem: {planet.name}
+                                    </>}
       
       </FlexBox>
-
-      <button onClick={goBack}>Voltar</button>
+      
+      <button style ={{marginTop: 15}} onClick={goBack}>Voltar</button>
     </div>
   );
 };
