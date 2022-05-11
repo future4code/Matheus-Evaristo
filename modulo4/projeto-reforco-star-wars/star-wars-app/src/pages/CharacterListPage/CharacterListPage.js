@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
-import { CharCard, FlexRow } from "./style";
+import logo from '../../assets/Star_Wars_Logo.svg.png'
+import { BackGround, CharCard, FlexRow, H1Color, H1x, LogoContainer, LogoImage } from "./style";
 
 const CharacterListPage = () => {
   const [ characterList, setCharacterList ] = useState([])
@@ -33,21 +34,24 @@ const CharacterListPage = () => {
   
   const chamaLista = characterList.map((person, i) => {
     return (
-      <FlexRow>
+      
       <CharCard key={i} onClick={() => goToDetailPage(i+1)} >
           <img src={`https://starwars-visualguide.com/assets/img/characters/${i+1}.jpg`} 
-          style ={{padding: 10}} width= '200px' height={'200px'} />
+          style ={{paddingBottom: 10}} width= '180px' height={'200px'} />
           {person.name}
       </CharCard>
-      </FlexRow>
+      
     );
   });
 
   return (
-    <div>
-      <h1>Lista de Personagens</h1>
+    <BackGround>
+      <LogoContainer> <LogoImage src={ logo }/></LogoContainer>
+      <H1x><h1>P E R S O N A G E N S</h1></H1x> 
+      <FlexRow>
       {chamaLista}
-    </div>
+      </FlexRow>
+    </BackGround>
   );
 };
 

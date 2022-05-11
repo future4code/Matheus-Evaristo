@@ -1,17 +1,10 @@
 import styled from "styled-components";
 
 export const CharCard = styled.div`
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border: 1px solid black;
+  padding: 10px;
   margin: 10px;
-  width: 180px;
-  height: 240px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 500;
-  
+  width: 300px;
   &:hover {
     cursor: pointer;
     background-color: lightblue;
