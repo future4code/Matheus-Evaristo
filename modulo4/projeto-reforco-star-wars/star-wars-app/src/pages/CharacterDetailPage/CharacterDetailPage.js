@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle } from "reactstrap";
+import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Spinner } from "reactstrap";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
@@ -54,7 +54,8 @@ const CharacterDetailPage = () => {
     <div>
       
       {/* <h1>Detalhes do Personagem:</h1> */}
-      {isLoading ? 'CARREGANDO...' : <>      
+      {isLoading ? <Spinner color="warning" size="" >Loading...
+                  </Spinner> : <>      
       <div>
         <Card
           body
