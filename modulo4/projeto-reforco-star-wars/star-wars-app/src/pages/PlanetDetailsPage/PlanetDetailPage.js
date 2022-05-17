@@ -63,7 +63,7 @@ const PlanetDetailsPage = () => {
               className="mb-2 text-muted"
               tag="h6"
             >
-              Planeta de origem
+              Gravidade
             </CardSubtitle>
             <CardText>
               {planet.gravity}
@@ -72,7 +72,7 @@ const PlanetDetailsPage = () => {
               className="mb-2 text-muted"
               tag="h6"
             >
-              Ano de nascimento
+              População
             </CardSubtitle>
             <CardText>
             {planet.population}
@@ -81,19 +81,19 @@ const PlanetDetailsPage = () => {
               className="mb-2 text-muted"
               tag="h6"
             >
-              Peso
+              Clima
             </CardSubtitle>
             <CardText>
-            {planet.arid} kg
+            {planet.climate}
             </CardText>
             <CardSubtitle
               className="mb-2 text-muted"
               tag="h6"
             >
-              Altura
+              Terreno
             </CardSubtitle>
             <CardText>
-            {planet.terrain} cm
+            {planet.terrain}
             </CardText>
             <Button style={{backgroundColor: 'black', color:'#FFE81F'}} onClick={goBack}>
               Voltar

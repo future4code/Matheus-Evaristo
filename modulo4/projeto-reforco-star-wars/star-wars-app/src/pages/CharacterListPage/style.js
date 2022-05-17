@@ -11,7 +11,7 @@ export const CharCard = styled.div`
   width: 182px;
   height: 240px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: 500;
+  
   
   &:hover {
     cursor: pointer;
@@ -48,11 +48,14 @@ export const FlexRowPlanetas = styled.div`
   justify-content: center  ;
 `
 
-export const BackGround = styled.div `
-  background-image: url(${fundo});
+export const BackGround = styled.div`
+ 
+  
+  background-image: url(${fundo}); 
+  background-size: cover; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
   
 `
 
@@ -74,4 +77,10 @@ justify-content: center;
 color: #FFE81F;
 font-family: Georgia, 'Times New Roman', Times, serif;
 
+`
+
+export const Jutify = styled.div `
+display: flex;
+flex-direction: column;
+justify-content: center;
 `

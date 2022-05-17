@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
 import logo from '../../assets/Star_Wars_Logo.svg.png'
-import { BackGround, CharCard, FlexRow, FlexRowPlanetas, H1x, LogoContainer, LogoImage, PlanetCard } from "./style";
+import { BackGround, CharCard, FlexRow, FlexRowPlanetas, H1x, Jutify, LogoContainer, LogoImage, PlanetCard } from "./style";
 import { Spinner } from "reactstrap";
+import fundo from '../../assets/background.jpg'
+
 
 
 const CharacterListPage = () => {
@@ -55,7 +57,7 @@ const CharacterListPage = () => {
     navigate(`/info/${i}`)
     
   }
-
+  
   const planetas = planetList.map((planet, i) => {
     return(
         
@@ -71,32 +73,67 @@ const CharacterListPage = () => {
   const chamaLista = characterList.map((person, i) => {
     return (
       
+      
       <CharCard key={i} onClick={() => goToDetailPage(i+1)} >
           <img src={`https://starwars-visualguide.com/assets/img/characters/${i+1}.jpg`} 
           style ={{paddingBottom: 10}} width= '176px' height={'200px'} />
           {person.name}
       </CharCard>
       
+      
     );
   });
 
   return (
-    <BackGround>
+    <div style={{ 
+      backgroundImage:  `url(${fundo})` 
+    }}>
+
       <LogoContainer> <LogoImage src={ logo } /></LogoContainer>
+
       <H1x><h1>P E R S O N A G E N S</h1></H1x>
-      
-      <FlexRow>
-      {isLoading ? <Spinner color="warning" size="" >Loading...
+       
+
+     
+          
+          <div className="container">
+          <div className="row ">
+          <div className="col">
+          <div className="row justify-content-center">
+          
+          
+  
+            
+
+      {isLoading ? <Spinner color="warning" size=""  >Loading...
                   </Spinner> : <>{chamaLista}
-                  </>} 
-      </FlexRow>
+                  </>}
+                  
+          
+          </div>
+          </div>
+          </div>
+          </div>
+     
+  
+          
       <H1x><h1>P L A N E T A S</h1></H1x>
-      <FlexRowPlanetas>
+
+          <div className="container my-1 py-1">
+          <div className="row">
+          <div className="col-12 md-1 mb-1">
+          <div className="row justify-content-center">
+      
       {isLoading ? <Spinner color="warning" size="" >Loading...
                   </Spinner> : <>{planetas}
                   </>}
-      </FlexRowPlanetas>
-    </BackGround>
+
+          </div>
+          </div>
+          </div>
+          </div>
+
+    </div>
   );
 };
 
