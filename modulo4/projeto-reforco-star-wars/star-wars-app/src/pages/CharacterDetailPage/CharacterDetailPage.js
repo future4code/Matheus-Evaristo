@@ -3,6 +3,7 @@ import { Button, Card, CardBody, CardSubtitle, CardText, CardTitle, Spinner } fr
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { BASE_URL } from "../../constants/urls";
+import { ScreenContainer } from "./style";
 
 
 
@@ -127,17 +128,3 @@ const CharacterDetailPage = () => {
 
 export default CharacterDetailPage;
 
-// style ={{marginTop: 15, marginLeft: 10}}
-
-{/* <FlexBox>
-{isLoading ? 'CARREGANDO...' : <><strong>Nome:</strong>{details.name}
-                                 <strong>Planeta de origem:</strong> {planet.name}
-                                 <strong>Ano de Nascimento:</strong> {details.birth_year}
-                                 <strong>Peso:</strong> {details.mass} kg
-                                 <strong>Altura:</strong> {details.height} cm
-
-                              </>}
-
-</FlexBox>
-
-<Button color="warning"  onClick={goBack}>Voltar</Button> */}

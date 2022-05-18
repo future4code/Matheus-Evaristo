@@ -85,9 +85,7 @@ const CharacterListPage = () => {
   });
 
   return (
-    <div style={{ 
-      backgroundImage:  `url(${fundo})` 
-    }}>
+    <BackGround>
 
       <LogoContainer> <LogoImage src={ logo } /></LogoContainer>
 
@@ -133,7 +131,7 @@ const CharacterListPage = () => {
           </div>
           </div>
 
-    </div>
+    </BackGround>
   );
 };
 
